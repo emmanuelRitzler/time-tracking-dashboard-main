@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+:root {
+    --bg-color: #0E1323;
+    --bg-card-data: #1C204B;
+
+    --color-main-card: #5747EA;
+    --color-card-one: #FF8B64;
+    --color-card-two: #55C2E6;
+    --color-card-three: #FF5E7D;
+    --color-card-four: #4BCF82;
+    --color-card-five: #7335D2;
+    --color-card-six: #F1C75B;
+
+    --color-icon-one: #D96C47;
+    --color-icon-two: #3F9CBB;
+    --color-icon-three: #F04667;
+    --color-icon-four: #29BA66;
+    --color-icon-five: #5A1CBB;
+    --color-icon-six: #E6A532;
+
+    --text-menu: #7078C9;
+    --text-menu-selected: #FFFFFF;
+    --text-last-week: #BBC0FF;
+    --text-time: #FFFFFF;
+    --text-report: #BBC0FF;
+    --text-user-name: #FFFFFF;
+
+    --color-three-dots: #BBC0FF;
+    --color-border-photo: #FFFFFF;
+}
+
+body {
+    background-color: var(--bg-color);
+    padding: 20% 4%;
+}
+
+#grid-card {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(7, 1fr);
+    grid-gap: 24px;
+    border-radius: 15px;
+    background-color: var(--bg-card-data);
+}
+
+#grid-main-card {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60% 40%;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+#report-for {
+    background-color: var(--color-main-card);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    border-radius: 15px;
+}
+
+#nav-options {
+    background-color: var(--bg-card-data);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    border-radius: 15px;
+}
+
+#round-image img {
+    height: 64px;
+    width: 64px;
+    border: 3px solid var(--color-border-photo);
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+#text p {
+    color: var(--text-report);
+    font-weight: 300;
+    margin-bottom: 4px;
+}
+
+#text h1 {
+    color: var(--text-user-name);
+    font-size: 1.3rem;
+    font-weight: 100;
+}
+
+#nav-options ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#nav-options li {
+    display: flex;
+    color: var(--text-menu);
+    padding: 15px;
+
+
+    &:active,
+    &:focus {
+        color: var(--text-menu-selected);
+    }
+}
